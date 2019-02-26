@@ -55,7 +55,7 @@
             </div>
           </div>
         </nav>
-		<br />
+	<br />
         <div class="container">
           <div class="jumbotron">
             <h1>Scan Report<br/><small>Nmap <xsl:value-of select="/nmaprun/@version"/></small></h1>
@@ -79,8 +79,6 @@
               </div>
             </div>
           </div>
-		  
-		  
           <h2 id="openservices" class="target">Open Services</h2>
           <div class="table-responsive">
             <table id="table-services" class="table table-striped dataTable" role="grid">
@@ -119,11 +117,6 @@
               $('#table-services').DataTable();
             });
           </script>
-		  
-		  
-		  
-		  
-		  
           <h2 id="scannedhosts" class="target">Scanned Hosts<xsl:if test="/nmaprun/runstats/hosts/@down > 1024"><small> (offline hosts are hidden)</small></xsl:if></h2>
           <div class="table-responsive">
             <table id="table-overview" class="table table-striped dataTable" role="grid">
@@ -171,9 +164,9 @@
           </script>
           <h2 id="onlinehosts" class="target">Online Hosts</h2>
           <xsl:for-each select="/nmaprun/host[status/@state='up']">
-			<span>
-				  <xsl:attribute name="id"><xsl:value-of select="address/@addr"/></xsl:attribute>
-			</span>
+	  <span>
+	        <xsl:attribute name="id"><xsl:value-of select="address/@addr"/></xsl:attribute>
+	  </span>
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h3 class="panel-title"><xsl:value-of select="address/@addr"/><xsl:if test="count(hostnames/hostname) > 0"> - <xsl:value-of select="hostnames/hostname/@name"/></xsl:if></h3>
@@ -272,7 +265,6 @@
               </div>
             </div>
           </xsl:for-each>
-
         </div>
         <footer class="footer">
           <div class="container">
