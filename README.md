@@ -22,3 +22,7 @@ xsltproc -o scanme.html nmap-template.xsl scanme.xml
 
 - You can also format old scans with the xsl stylesheet.
 - Insert `<?xml-stylesheet href="https://raw.githubusercontent.com/kac89/nmap-report-template/master/nmap-template.xsl" type="text/xsl"?>` after `<!DOCTYPE nmaprun>`.
+
+## Author
+
+All credits go to: https://github.com/honze-net/nmap-bootstrap-xsl
