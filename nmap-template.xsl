@@ -135,7 +135,7 @@
                     <xsl:for-each select="/nmaprun/host[status/@state='up']">
                       <tr>
                         <td><span class="label label-danger"><xsl:if test="status/@state='up'"><xsl:attribute name="class">label label-success</xsl:attribute></xsl:if><xsl:value-of select="status/@state"/></span></td>
-                        <td><xsl:value-of select="address/@addr"/></td>
+                        <td><a><xsl:attribute name="href">#<xsl:value-of select="address/@addr"/></xsl:attribute><xsl:value-of select="address/@addr"/></a></td>
                         <td><xsl:value-of select="hostnames/hostname/@name"/></td>
                         <td><xsl:value-of select="count(ports/port[state/@state='open' and @protocol='tcp'])"/></td>
                         <td><xsl:value-of select="count(ports/port[state/@state='open' and @protocol='udp'])"/></td>
@@ -146,7 +146,7 @@
                     <xsl:for-each select="/nmaprun/host">
                       <tr>
                         <td><span class="label label-danger"><xsl:if test="status/@state='up'"><xsl:attribute name="class">label label-success</xsl:attribute></xsl:if><xsl:value-of select="status/@state"/></span></td>
-                        <td><xsl:value-of select="address/@addr"/></td>
+                        <td><a><xsl:attribute name="href">#<xsl:value-of select="address/@addr"/></xsl:attribute><xsl:value-of select="address/@addr"/></a></td>
                         <td><xsl:value-of select="hostnames/hostname/@name"/></td>
                         <td><xsl:value-of select="count(ports/port[state/@state='open' and @protocol='tcp'])"/></td>
                         <td><xsl:value-of select="count(ports/port[state/@state='open' and @protocol='udp'])"/></td>
@@ -165,7 +165,7 @@
           <h2 id="onlinehosts" class="target">Online Hosts</h2>
           <xsl:for-each select="/nmaprun/host[status/@state='up']">
 	  <span>
-	        <xsl:attribute name="id"><xsl:value-of select="address/@addr"/></xsl:attribute>
+		<xsl:attribute name="id"><xsl:value-of select="address/@addr"/></xsl:attribute>
 	  </span>
             <div class="panel panel-default">
               <div class="panel-heading">
