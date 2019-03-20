@@ -27,4 +27,4 @@ xsltproc -o scanme.html nmap-template.xsl scanme.xml
 
 All credits goes to: https://github.com/honze-net/nmap-bootstrap-xsl
 
-I only modify structure and add anchor links.
+I just modified structure and add anchor links. - @kac89
